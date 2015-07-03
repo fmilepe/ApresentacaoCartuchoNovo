@@ -1,5 +1,4 @@
-# Notas de aula de Computação I
-
+# Apresentação de Slides sobre a criação de novos cartuchos pra o MDArte
 
 # Requisitos
 
