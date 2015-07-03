@@ -29,7 +29,7 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 	
 ### O que é um cartucho ?
 
-- Cartuchos são os componentes do MDArte responsáveis dirigir a geração do código para a utilização de uma dada tecnologia
+- Cartuchos são os componentes do MDArte responsáveis dirigir a geração do código para a utilização de uma dada tecnologia.
 
 - O MDArte atualmente possui os seguintes cartuchos:
 	
