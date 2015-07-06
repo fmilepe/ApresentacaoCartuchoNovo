@@ -31,6 +31,8 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 - Cartuchos são os componentes do MDArte responsáveis dirigir a geração do código para a utilização de uma dada tecnologia.
 
+- Cartuchos são compostos basicamente por arquivos de configuração, templates e, possivelmente, metafacades personalizados.
+
 - O MDArte atualmente possui os seguintes cartuchos:
 	
 	- Bpm4Struts - utiliza o framework Struts 2 para organizar e disponibilizar um interface web através da tecnologia JEE;
@@ -42,6 +44,12 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 	- Java - utiliza a linguagem Java e gera elementos básicos seguindo alguns dos design patterns existentes;
 	
 ### Estrutura Básica de um Cartucho
+
+- Os cartuchos do MDArte devem seguir uma mesma estrutura básica de diretórios e arquivos de configuração. 
+
+- O uso da estrutura padrão permite ao framework identificar o cartucho e saber como tratá-lo sem a necessidade de configurações adicionais.
+
+-
 
 ### Arquivos de Configuração do Cartucho
 
