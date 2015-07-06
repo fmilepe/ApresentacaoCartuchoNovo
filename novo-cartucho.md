@@ -17,6 +17,8 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 - Arquivos de Configuração do Cartucho
 
+- Arquivos de Configuração para o Maven
+
 - Criando um Novo Cartucho
 
 	- Criando os Arquivos de Configuração do MDArte
@@ -29,7 +31,7 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 	
 ### O que é um cartucho ?
 
-- Cartuchos são os componentes do MDArte responsáveis dirigir a geração do código para a utilização de uma dada tecnologia.
+- Cartuchos são os componentes do MDArte responsáveis por dirigir a geração de código para a utilização de uma dada tecnologia.
 
 - Cartuchos são compostos basicamente por arquivos de configuração, templates e, possivelmente, metafacades personalizados.
 
@@ -60,13 +62,32 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 ### Estrutura Básica de um Cartucho
 
 - A Estrutura básica de diretórios do cartucho se dá da seguinte forma:
+
 	- src - Diretrório que contém todos os arquivos que compõem o cartucho;
+	
 	- src > java - Diretório que armazena os arquivos Java para os metafacades do cartucho;
+	
 	- src > templates - Diretório que armazena os templates responsáveis pela geração dos arquivos finais produzidos pelo cartucho;
-	- src > META-INF - Diretório que armazena os arquivos que configuram o mapeamentos e transofrmações feitos pelo cartucho a fim de gerar o código final da aplicação;
+	
+	- src > META-INF > andromda - Diretório que armazena os arquivos que configuram o mapeamentos e transofrmações feitos pelo cartucho a fim de gerar o código final da aplicação;
+	
 	- src > uml - Diretório que contém o modelo UML responsável por descrever os metafacades personalizados e quaisquer outras classes modeladas especificamente para o cartucho em construção.
 
 ### Arquivos de Configuração do Cartucho
+
+- Como já vimos, um cartucho do MDArte deve possuir alguns arquivos \texttt{XML} a fim de configurar os comportamentos de mapeamento e transformações do cartucho. 
+
+- Um cartucho típico contém os seguintes arquivos de configuração:
+
+	- \texttt{namespace.xml} - ;
+
+	- \texttt{profile.xml} - ;
+
+	- \texttt{cartridge.xml} - ;
+	
+	- \texttt{metafacades.xml} - ;
+	
+### Arquivos de Configuração para o Maven
 
 ### Criando um Novo Cartucho
 
