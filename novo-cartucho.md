@@ -47,9 +47,24 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 - Os cartuchos do MDArte devem seguir uma mesma estrutura básica de diretórios e arquivos de configuração. 
 
-- O uso da estrutura padrão permite ao framework identificar o cartucho e saber como tratá-lo sem a necessidade de configurações adicionais.
+[columns]
 
--
+[column=0.6]
+
+![](images/cartucho-novo-0000.png)
+
+[/columns]
+
+- O uso da estrutura de diretórios padrão permite ao framework identificar o cartucho e saber como tratá-lo sem a necessidade de configurações adicionais.
+
+### Estrutura Básica de um Cartucho
+
+- A Estrutura básica de diretórios do cartucho se dá da seguinte forma:
+	- src - Diretrório que contém todos os arquivos que compõem o cartucho;
+	- src > java - Diretório que armazena os arquivos Java para os metafacades do cartucho;
+	- src > templates - Diretório que armazena os templates responsáveis pela geração dos arquivos finais produzidos pelo cartucho;
+	- src > META-INF - Diretório que armazena os arquivos que configuram o mapeamentos e transofrmações feitos pelo cartucho a fim de gerar o código final da aplicação;
+	- src > uml - Diretório que contém o modelo UML responsável por descrever os metafacades personalizados e quaisquer outras classes modeladas especificamente para o cartucho em construção.
 
 ### Arquivos de Configuração do Cartucho
 
