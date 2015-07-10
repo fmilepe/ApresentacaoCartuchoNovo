@@ -101,9 +101,40 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 - Como já sabemos, o MDArte faz uso da ferramenta Maven a fim de automatizar o processo de geração e compilação dos sistemas desenvolvidos e dos próprios cartuchos do frmaework;
 
-- ;
+- Para que que o Maven possa automatizar corretamente o processo de geração do cartucho, alguns arquivos de configuração extra se fazem necessários;
+
+[columns]
+
+[column=0.4]
+
+![](images/cartucho-novo-0002.png)
+
+[/columns]
+
+### Arquivos de Configuração para o Maven
+
+- São necessários os seguintes arquivos de configuração (localizados na pasta raiz do cartucho):
+	
+	- \texttt{maven.xml} - Arquivo XML responsável por definir quais tipos de \texttt{goals (clean , install etc.)} o Maven executará para o cartucho;
+	
+	- \texttt{mda.properties} e \texttt{project.properties} - Arquivos de propriedades com caminhos de diretórios usados na compilação e do modelo UML do cartucho;
+	
+	- \texttt{pom.xml} - Arquivo XML reponsável por descrever o projeto sendo automatizado para o Maven, contendo desde informações sobre os desenvolvedores e a url onde o projeto reside, até arquivos de configuração e algumas dependências de projeto. ;
+
+	- \texttt{project.xml} - Arquivo XML reponsável por registrar as dependências e outras características específicas do projeto sendo desenvolvido.
 
 ### Criando um Novo Cartucho
+
+- Usaremos uma estrutura básica com todos os diretórios e arquivos necessários para criar um novo cartucho, disponibilizada pelo MDArte no diretório \texttt{mdarte > samples > novo-cartucho}.
+
+[columns]
+
+[column=0.4]
+
+![](images/cartucho-novo-0003.png)
+
+[/columns]
+
 
 ### Criando os Arquivos de Configuração do MDArte
 
