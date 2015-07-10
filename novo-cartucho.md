@@ -77,17 +77,31 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 - Como já vimos, um cartucho do MDArte deve possuir alguns arquivos \texttt{XML} a fim de configurar os comportamentos de mapeamento e transformações do cartucho. 
 
+[columns]
+
+[column=0.4]
+
+![](images/cartucho-novo-0001.png)
+
+[/columns]
+
+### Arquivos de Configuração do Cartucho
+
 - Um cartucho típico contém os seguintes arquivos de configuração:
 
-	- \texttt{namespace.xml} - ;
+	- \texttt{namespace.xml} - Arquivo XML é responsável por registrar as propriedades e variáveis globais que estarão disponíveis para os templates do cartucho, bem como registrar os componentes do mesmo;
 
-	- \texttt{profile.xml} - ;
+	- \texttt{profile.xml} - Arquivo XML é reponsável por registrar os estereótipos e valores etiquetados que serão usados pelo cartucho na interpretação do modelo UML do sistema;
 
-	- \texttt{cartridge.xml} - ;
+	- \texttt{cartridge.xml} - Arquivo XML responsável por configurar as transformações a serem realizadas pelo cartucho, bem como propriedades e demais classes e bibliotecas de macros utilizadas como elementos auxiliares no processo de geração do código;
 	
-	- \texttt{metafacades.xml} - ;
+	- \texttt{metafacades.xml} - Arquivo XML responsável configurar as regras de mapeamento das classes de metamodelo para os metafacades utilizados pelo cartucho.
 	
 ### Arquivos de Configuração para o Maven
+
+- Como já sabemos, o MDArte faz uso da ferramenta Maven a fim de automatizar o processo de geração e compilação dos sistemas desenvolvidos e dos próprios cartuchos do frmaework;
+
+- ;
 
 ### Criando um Novo Cartucho
 
