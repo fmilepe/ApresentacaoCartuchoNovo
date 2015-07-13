@@ -31,11 +31,11 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 	
 ### O que é um cartucho ?
 
-- Cartuchos são os componentes do MDArte responsáveis por dirigir a geração de código para a utilização de uma dada tecnologia.
+- Cartuchos são os componentes do \texttt{MDArte} responsáveis por dirigir a geração de código para a utilização de uma dada tecnologia.
 
 - Cartuchos são compostos basicamente por arquivos de configuração, templates e, possivelmente, metafacades personalizados.
 
-- O MDArte atualmente possui os seguintes cartuchos:
+- O \texttt{MDArte} atualmente possui os seguintes cartuchos:
 	
 	- Bpm4Struts - utiliza o framework Struts 2 para organizar e disponibilizar um interface web através da tecnologia JEE;
 	
@@ -47,7 +47,7 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 	
 ### Estrutura Básica de um Cartucho
 
-- Os cartuchos do MDArte devem seguir uma mesma estrutura básica de diretórios e arquivos de configuração. 
+- Os cartuchos do \texttt{MDArte} devem seguir uma mesma estrutura básica de diretórios e arquivos de configuração. 
 
 [columns]
 
@@ -75,7 +75,7 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 ### Arquivos de Configuração do Cartucho
 
-- Como já vimos, um cartucho do MDArte deve possuir alguns arquivos \texttt{XML} a fim de configurar os comportamentos de mapeamento e transformações do cartucho. 
+- Como já vimos, um cartucho do \texttt{MDArte} deve possuir alguns arquivos \texttt{XML} a fim de configurar os comportamentos de mapeamento e transformações do cartucho. 
 
 [columns]
 
@@ -99,7 +99,7 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 	
 ### Arquivos de Configuração para o Maven
 
-- Como já sabemos, o MDArte faz uso da ferramenta Maven a fim de automatizar o processo de geração e compilação dos sistemas desenvolvidos e dos próprios cartuchos do frmaework;
+- Como já sabemos, o \texttt{MDArte} faz uso da ferramenta Maven a fim de automatizar o processo de geração e compilação dos sistemas desenvolvidos e dos próprios cartuchos do frmaework;
 
 - Para que que o Maven possa automatizar corretamente o processo de geração do cartucho, alguns arquivos de configuração extra se fazem necessários;
 
@@ -125,7 +125,7 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 ### Criando um Novo Cartucho
 
-- Usaremos uma estrutura básica com todos os diretórios e arquivos necessários para criar um novo cartucho, disponibilizada pelo MDArte no diretório \texttt{mdarte > samples > novo-cartucho}.
+- Usaremos uma estrutura básica com todos os diretórios e arquivos necessários para criar um novo cartucho, disponibilizada pelo \texttt{MDArte} no diretório \texttt{mdarte > samples > novo-cartucho}.
 
 [columns]
 
@@ -137,7 +137,7 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 ### Criando um Novo Cartucho
 
-- Começaremos copiando o sample \texttt{novo-cartucho} para dentro do diretório \texttt{mdarte > cartridges}; \linebreak \texttt{Obs: Caso queira, você pode renomear o diretório com o nome de cartucho desejado}
+- Começaremos copiando o sample \texttt{novo-cartucho} para dentro do diretório \texttt{mdarte > cartridges};
 
 - Teremos então a seguinte configuração do diretório \texttt{mdarte > cartridges} :
 
@@ -149,11 +149,45 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 [/columns]
 
-### Editando os Arquivos de Configuração do Maven
+### Editando os Arquivos \texttt{.properties}
 
-- Iremos agora editar alguns dos arquivos de configuração do Maven a fim de fornecer informações básicas que serão necessárias para a compilação e geração dos artefatos finais do cartucho;
-  
+- Começaremos editando ambos os arquivos \texttt{.properties} a fim de configurar algumas propriedades que serão usadas pelo \texttt{Maven} na descoberta e processamentos do modelo UML do cartucho.
 
+- Temos interesse em 2 propriedades em especial:
+	
+	- \texttt{metafacade.model.file} - Define o caminho para o arquivo \texttt{xml.zip} que empacota o modelo UML do cartucho.
+	
+	- \texttt{maven.andromda.model.uri} - Define o caminho, dentro do \texttt{xml.zip} para o arquivo UML do cartucho. 
+
+### Editando os Arquivos \texttt{.properties}
+
+- Os arquivos \texttt{mda.properties} e \texttt{project.properties} fornecidos pelo \texttt{MDArte} possuem as propriedades já citadas configurados da seguinte forma:
+
+[columns]
+
+[column=0.8]
+
+![](images/cartucho-novo-0005.png)
+
+[/columns]
+
+- Para mudar o nome dos arquivos com o modelo basta renomeá-los no diretório onde se encontram e mudar as propriedades \texttt{metafacade.model.file} e \texttt{maven.andromda.model.uri}, a fim de que reflitam as mudanças feitas.
+
+### Editando o \texttt{project.xml}
+
+- Agora editaremos o \texttt{project.xml} para customizar as informações básicas do cartucho, bem como dependências adicionais para o mesmo.
+
+- No momento, estamos interessados em editar as seguintes propriedades definidas no \texttt{XML} default:
+
+	- <artifactId> - Define o nome que será dado ao arquivo compilado final do cartucho em desenvolvimento.
+	
+	- <name> - Nome do cartucho em desenvolvimento.
+
+	- <shortDescription> - Descrição curta sobre o cartucho e sua finalidade.
+	
+	- <description> - Descrição completa sobre o cartucho e sua finalidade.
+	
+	- <developers> - Lista composta de tags <developer> que documentam informações básicas sobre os desenvolvedores do cartucho. 
 
 ### Editando os Arquivos de Configuração do MDArte
 
