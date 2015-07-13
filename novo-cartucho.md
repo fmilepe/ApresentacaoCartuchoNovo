@@ -129,16 +129,33 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 [columns]
 
-[column=0.4]
+[column=0.3]
 
 ![](images/cartucho-novo-0003.png)
 
 [/columns]
 
+### Criando um Novo Cartucho
 
-### Criando os Arquivos de Configuração do MDArte
+- Começaremos copiando o sample \texttt{novo-cartucho} para dentro do diretório \texttt{mdarte > cartridges}; \linebreak \texttt{Obs: Caso queira, você pode renomear o diretório com o nome de cartucho desejado}
 
-### Criando os Arquivos de Configuração do Maven
+- Teremos então a seguinte configuração do diretório \texttt{mdarte > cartridges} :
+
+[columns]
+
+[column=0.5]
+
+![](images/cartucho-novo-0004.png)
+
+[/columns]
+
+### Editando os Arquivos de Configuração do Maven
+
+- Iremos agora editar alguns dos arquivos de configuração do Maven a fim de fornecer informações básicas que serão necessárias para a compilação e geração dos artefatos finais do cartucho;
+  
+
+
+### Editando os Arquivos de Configuração do MDArte
 
 ### Criando a Primeira Transformação
 
