@@ -227,6 +227,20 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 [/columns]
 
+### Editando o arquivo \texttt{cartridge.xml}
+
+- Editaremos o \texttt{cartridge.xml} a fim de habilitar a referência às propriedades que já configuramos antes no \texttt{namespace.xml}.
+
+- O \texttt{XML} usado para configurar as referências às propriedades é o seguinte:  
+
+[columns]
+
+[column=0.7]
+
+![](images/cartucho-novo-0007.png)
+
+[/columns]
+
 ### Criando a Primeira Transformação
 
 ### Criando um Metafacade Personalizado
