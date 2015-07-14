@@ -241,7 +241,57 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 [/columns]
 
+### "Ativando" o cartucho novo
+
+- Para que o cartucho em criação seja aplicado a um projeto, precisamos inserí-lo na configuração do MDArte, alterando o arquivo \texttt{andromda.xml} dos projetos.
+
+- Para que o cartucho esteja automáticamente disponível para os projetos gerados no futuro, editaremos o arquivo \texttt{andromda.xml.vsl} no caminho \texttt{mdarte > maven > andromdapp > plugin-resources > andromdapp > j2ee > templates > mda > conf}.
+
+- Adicionaremos uma nova configuração de namespace no \texttt{andromda.xml}, com o mesmo \texttt{name} de namespace que definimos no \texttt{namespace.xml}, dentro do qual definiremos as propriedades que configuramos previamente.
+
+### "Ativando" o cartucho novo
+
+- Adicionaremos então no template do \texttt{andromda.xml.vsl}, dentro da tag \texttt{namespaces.xml}, o seguinte \texttt{xml} :
+
+[columns]
+
+[column=0.9]
+
+![](images/cartucho-novo-0008.png)
+
+[/columns]
+
+- Para um aplicar o cartucho em um projeto pré-existente, inserir esse \texttt{XML} no arquivo \texttt{andromda.xml} deste projeto, no caminho \texttt{diretórioDoProjeto > mda > conf}.
+
 ### Criando a Primeira Transformação
+
+- Começaremos criando uma transformação extremamente simples, um "helloCartridge".
+
+- Para tal, começaremos editando o arquivo \texttt{cartridge.xml}, a fim de fazer a configuração para a transformação que vamos criar.
+
+- Adicionaremos no arquivo o seguinte \texttt{XML}:
+
+[columns]
+
+[column=1.1]
+
+![](images/cartucho-novo-0009.png)
+
+[/columns]
+
+### Criando a Primeira Transformação
+
+- Criaremos agora o template que referenciamos no \texttt{cartridge.xml}, no caminho \texttt{diretórioDoCartucho > src > templates}.
+
+- No template criado, adicionaremos o seguinte código velocity:
+
+[columns]
+
+[column=0.9]
+
+![](images/cartucho-novo-0010.png)
+
+[/columns]
 
 ### Criando um Metafacade Personalizado
 
