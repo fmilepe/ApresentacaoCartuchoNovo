@@ -177,19 +177,55 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 - Agora editaremos o \texttt{project.xml} para customizar as informações básicas do cartucho, bem como dependências adicionais para o mesmo.
 
-- No momento, estamos interessados em editar as seguintes propriedades definidas no \texttt{XML} default:
+- No momento, estamos interessados em editar as seguintes propriedades definidas nas seguintes tags do \texttt{XML} default:
 
-	- <artifactId> - Define o nome que será dado ao arquivo compilado final do cartucho em desenvolvimento.
+	- artifactId - Define o nome que será dado ao arquivo compilado final do cartucho em desenvolvimento.
 	
-	- <name> - Nome do cartucho em desenvolvimento.
+	- name - Nome do cartucho em desenvolvimento.
 
-	- <shortDescription> - Descrição curta sobre o cartucho e sua finalidade.
+	- shortDescription - Descrição curta sobre o cartucho e sua finalidade.
 	
-	- <description> - Descrição completa sobre o cartucho e sua finalidade.
+	- description - Descrição completa sobre o cartucho e sua finalidade.
 	
-	- <developers> - Lista composta de tags <developer> que documentam informações básicas sobre os desenvolvedores do cartucho. 
+	- developers - Lista composta de tags \texttt{developer} que documentam informações básicas sobre os desenvolvedores do cartucho.
+	
+### Editando o \texttt{pom.xml}
 
-### Editando os Arquivos de Configuração do MDArte
+- No \texttt{pom.xml}, customizaremos também algumas propriedades básicas que definem informações sobre o cartucho.
+
+- No momento, estamos interessados em editar as seguintes propriedades definidas nas seguintes tags do \texttt{XML} default:
+
+	- artifactId - Define o nome que será dado ao arquivo compilado final do cartucho em desenvolvimento. Deve conter o mesmo valor já definido no \texttt{project.xml}.
+	
+	- name - Nome do cartucho em desenvolvimento. Deve conter o mesmo valor já definido no \texttt{project.xml}.
+	
+	- description - Descrição sobre o cartucho e sua finalidade.
+
+### Editando o arquivo \texttt{namespace.xml}
+
+- No \texttt{namespace.xml}, configuraremos algumas propriedades que serão usadas como variáveis globais do cartucho.
+
+- Editaremos a a tag \texttt{propertyGroup}, inserindo dentro dela algumas tags \texttt{property} definindo propriedades que usaremos nas transformações criadas a seguir.
+
+- Configuraremos as seguintes propriedades :
+
+	- projectId - Propriedade global do MDArte. Contém o id do projeto, fornecido ao MDArte quando da execução do plugin criação de projetos;
+	
+	- dummyOutlet - Diretório onde serão criados os arquivos gerados a partir dos templates que criaremos a seguir.
+	
+	- dummyProperty - Propriedade booleana que criaremos a título de exemplo.
+
+### Editando o arquivo \texttt{namespace.xml}
+
+- O \texttt{XML} usado para configurar as propriedades é o seguinte:
+
+[columns]
+
+[column=1.0]
+
+![](images/cartucho-novo-0006.png)
+
+[/columns]
 
 ### Criando a Primeira Transformação
 
