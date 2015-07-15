@@ -287,12 +287,93 @@ Ao final desta apresentação você terá entendido o que é um cartucho do MDAr
 
 [columns]
 
-[column=0.9]
+[column=0.8]
 
 ![](images/cartucho-novo-0010.png)
 
 [/columns]
 
+- Gerando o \texttt{MDArte} novamente e então regerando o sistema usado para testar o cartucho, encontraremos na pasta raiz do cartucho o arquivo HelloCartridge, com o seguinte conteúdo:
+
+[columns]
+
+[column=0.9]
+
+![](images/cartucho-novo-0011.png)
+
+[/columns]
+
+### Criando uma transformação a partir de um metafacade pré-existente
+
+- Vamos criar agora uma transformação a partir do metafacade \texttt{org.andromda.metafacades.uml14.CoppetecEntityLogicImpl}, que é parte do conjunto básico de metafacades do \texttt{MDArte}.
+
+- Novamente, começaremos editando o \texttt{cartridge.xml}, adicionando a configuração para tal transformação. O \texttt{XML} de configuração é o seguinte:
+
+[columns]
+
+[column=0.9]
+
+![](images/cartucho-novo-0012.png)
+
+[/columns]
+
+### Criando uma transformação a partir de um metafacade pré-existente
+
+- Agora editaremos o arquivo \texttt{metafacades.xml} a fim de criar o mapeamento das classes do metamodelo para o metafacade que utilizaremos.
+
+- Adicionaremos então o seguinte \texttt{XML} de configuração:
+
+[columns]
+
+[column=1.1]
+
+![](images/cartucho-novo-0013.png)
+
+[/columns]
+
+
+### Criando uma transformação a partir de um metafacade pré-existente
+
+- Agora editaremos o arquivo \texttt{profile.xml} a fim de que o \texttt{MDArte} reconheça o esteréotipo \texttt{<<Entity>>}, que será usado no mapeamento que acabamos de configurar.
+
+- Adicionaremos então o seguinte \texttt{XML} de configuração:
+
+[columns]
+
+[column=0.9]
+
+![](images/cartucho-novo-0014.png)
+
+[/columns]
+
+### Criando uma transformação a partir de um metafacade pré-existente
+
+- Criaremos por fim, o arquivo do template \texttt{EntityMetafacadeTest.vsl} que será o responsável pela geração efetiva da transformação.
+
+- A título de exemplo, usaremos o seguinte templates simples:
+
+[columns]
+
+[column=0.9]
+
+![](images/cartucho-novo-0015.png)
+
+[/columns]
+
+- Gerando o \texttt{MDArte} novamente e então regerando o sistema usado para testar o cartucho, encontraremos na pasta raiz do cartucho os arquivos gerados pelo EntityMetafacadeTest.vsl, com conteúdo análogo ao seguinte:
+
+[columns]
+
+[column=0.9]
+
+![](images/cartucho-novo-0016.png)
+
+[/columns]
+
 ### Criando um Metafacade Personalizado
+
+- Agora criaremos um metafacade personalizado, bem como uma transformação a partir do mesmo.
+
+- Começaremos criando a classe referente ao metafacade personalizado no modelo \texttt{UML} do cartucho.
 
 <!-- vim: set spell spelllang=pt_br: -->
